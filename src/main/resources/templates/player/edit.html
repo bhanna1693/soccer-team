@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Add Player</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+       <link href="/css/standard.css" rel="stylesheet">
+</head>
+<body>
+	<div class="container">
+		<h1>Add a new player</h1>
+ 		<form action="#" th:action="@{/player/edit}" th:object="${player}" th:method="put">
+ 		<input type="hidden" th:field="*{id}" />
+ 		
+ 		<div class="form-group">
+ 			<input type="text" class="form-control" placeholder="First Name" th:field="*{firstName}" />
+ 		</div>
+ 		
+ 		<div class="form-group">
+ 			<input type="text" class="form-control" placeholder="Last Name" th:field="*{lastName}" />
+ 		</div>
+ 		
+ 		<div class="form-group">
+ 			<input type="text" class ="form-control" placeholder="Team" th:field="*{team}" />
+ 		</div>
+ 		
+ 		<div class="form-group">
+ 			<input type="text" class ="form-control" placeholder="Position" th:field="*{position}" />
+ 		</div>
+ 		
+ 		<div class="form-group">
+ 			<input type="text" class ="form-control" placeholder="Number" th:field="*{number}" />
+ 		</div>
+ 		
+ 		
+		
+ 		<button class="btn btn-primary">Confirm Player</button>
+
+		<a class= "btn btn-primary" th:href="@{/}">Back To Homepage</a>
+	</div>
+	
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>	
+
+</body>
+</html>
